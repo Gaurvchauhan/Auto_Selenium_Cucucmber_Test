@@ -9,43 +9,50 @@ import com.qa.utils.*;
 public class LoginPage extends TestBase{
 	
 	//Page Factory - OR:
-	@FindBy(xpath="//input[@name='username']")
+	@FindBy(xpath="//input[@id='ctl00__cph__Login1_tbx_UserId']")
 	WebElement username;
 	
-	@FindBy(name="password")
+	@FindBy(xpath="//input[@id='ctl00__cph__Login1_tbx_Password']")
 	WebElement password;
 	
-	@FindBy(xpath="//input[@type='submit']")
+	@FindBy(xpath="//a[@id='ctl00__cph__Login1_lbt_login']")
 	WebElement loginBtn;
 	
-	@FindBy(xpath="//button[contains(text(),'Sign Up')]")
-	WebElement signUpBtn;
+	@FindBy(id="ctl00__cph__Login1_tbx_SecretAnswer")
+	WebElement secretAns;
 	
-	@FindBy(xpath="//img[contains(@class,'img-responsive')]")
-	WebElement crmLogo;
+	@FindBy(xpath="//a[@id='ctl00__cph__Login1_lbt_login']")
+	WebElement login2;
 	
 	//Initializing the Page Objects:
 	public LoginPage(){
+		
 		PageFactory.initElements(driver, this);
 	}
 	
-	//Actions:
-	public String validateLoginPageTitle(){
-		return driver.getTitle();
-	}
+	public void login(String un, String pwd,String sAns){
+		try{
 	
-	public boolean validateCRMImage(){
-		return crmLogo.isDisplayed();
-	}
+	username.sendKeys(un);
+
+	password.sendKeys(pwd);
+		
+	loginBtn.click();
+
+	secretAns.sendKeys(sAns);
+
+	login2.click();
 	
-	public HomePage login(String un, String pwd){
-		username.sendKeys(un);
-		password.sendKeys(pwd);
-		//loginBtn.click();
-		    	JavascriptExecutor js = (JavascriptExecutor)driver;
-		    	js.executeScript("arguments[0].click();", loginBtn);
+//		    	JavascriptExecutor js = (JavascriptExecutor)driver;
+//		    	js.executeScript("arguments[0].click();", loginBtn);
+		
+		
 		    	
-		return new HomePage();
+		//return new HomePage();
 	}
-	
-}
+	catch(Exception e)
+	{
+		System.out.println(e);
+	}
+		//return new HomePage();
+}}

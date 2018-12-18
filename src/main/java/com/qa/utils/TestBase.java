@@ -14,12 +14,13 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	
-	public TestBase(){
+	public  TestBase(){
 		try {
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("C:\\Users\\gourav\\git\\Framework\\com.frameWork.Selenium\\src\\main\\java\\com\\qa\\config\\config.properties");
+			FileInputStream fis = new FileInputStream("U:\\git\\Cucumber-Selenium\\src\\main\\java\\com\\qa\\config\\config.properties");
 			prop.load(fis);		
-		} catch (IOException e) {
+		} 
+		catch (IOException e) {
 			e.getMessage();
 		}
 	}
@@ -28,13 +29,13 @@ public static void initialization(){
 	String browserName = prop.getProperty("browser");
 	
 	if(browserName.equals("chrome")){
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\gourav\\Downloads\\chromedriver_win32\\chromedriver.exe");	
-		driver = new ChromeDriver(); 
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");	
+		 driver = new ChromeDriver(); 
 	}
-	else if(browserName.equals("FF")){
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\gourav\\Downloads\\geckodriver-v0.23.0-win64\\geckodriver.exe");	
-		driver = new FirefoxDriver(); 
-	}
+//	else if(browserName.equals("FF")){
+//		System.setProperty("webdriver.gecko.driver", "C:\\Users\\gourav\\Downloads\\geckodriver-v0.23.0-win64\\geckodriver.exe");	
+//		 driver = new FirefoxDriver(); 
+//	}
 	
 	driver.manage().window().maximize();
 	driver.manage().deleteAllCookies();
