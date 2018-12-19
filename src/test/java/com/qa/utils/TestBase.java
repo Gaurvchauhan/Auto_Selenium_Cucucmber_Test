@@ -17,12 +17,17 @@ public class TestBase {
 	public  TestBase(){
 		try {
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("U:\\git\\Cucumber-Selenium\\src\\main\\java\\com\\qa\\config\\config.properties");
+			FileInputStream fis = new FileInputStream("D:\\Selenium Java\\com.selenium.java2\\src\\test\\java\\com\\qa\\config\\config.properties");
 			prop.load(fis);		
 		} 
 		catch (IOException e) {
 			e.getMessage();
 		}
+	}
+	public String getReportConfigPath(){
+		String reportConfigPath = prop.getProperty("reportConfigPath");
+		if(reportConfigPath!= null) return reportConfigPath;
+		else throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");		
 	}
 
 public static void initialization(){

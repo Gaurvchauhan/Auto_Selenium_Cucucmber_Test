@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("U:/git/Cucumber-Selenium/src/main/java/com/qa/features/freeCRM.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("D:/Selenium Java/com.selenium.java2/src/test/java/com/qa/features/freeCRM.feature");
 formatter.feature({
   "line": 1,
   "name": "Free CRM Application Test",
@@ -25,17 +25,17 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "HomePageSteps.user_open_browser()"
+  "location": "HomePageStepsTest.user_open_browser()"
 });
 formatter.result({
-  "duration": 4545926012,
+  "duration": 3897834152,
   "status": "passed"
 });
 formatter.match({
-  "location": "HomePageSteps.user_enters_username_and_password()"
+  "location": "HomePageStepsTest.user_enters_username_and_password()"
 });
 formatter.result({
-  "duration": 1221273362,
+  "duration": 1163788514,
   "status": "passed"
 });
 });

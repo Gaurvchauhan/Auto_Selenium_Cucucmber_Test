@@ -12,25 +12,25 @@
         "steps": [
           {
             "result": {
-              "duration": 4545926012,
+              "duration": 3897834152,
               "status": "passed"
             },
             "line": 5,
             "name": "User open browser",
             "match": {
-              "location": "HomePageSteps.user_open_browser()"
+              "location": "HomePageStepsTest.user_open_browser()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1221273362,
+              "duration": 1163788514,
               "status": "passed"
             },
             "line": 6,
             "name": "user enters username and password",
             "match": {
-              "location": "HomePageSteps.user_enters_username_and_password()"
+              "location": "HomePageStepsTest.user_enters_username_and_password()"
             },
             "keyword": "Then "
           }
@@ -41,6 +41,6 @@
     "description": "",
     "id": "free-crm-application-test",
     "keyword": "Feature",
-    "uri": "U:/git/Cucumber-Selenium/src/main/java/com/qa/features/freeCRM.feature"
+    "uri": "D:/Selenium Java/com.selenium.java2/src/test/java/com/qa/features/freeCRM.feature"
   }
 ]

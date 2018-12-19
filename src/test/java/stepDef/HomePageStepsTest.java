@@ -12,7 +12,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class HomePageSteps extends TestBase
+public class HomePageStepsTest extends TestBase
 {
 	
 	//HomePage homePage =new HomePage();
