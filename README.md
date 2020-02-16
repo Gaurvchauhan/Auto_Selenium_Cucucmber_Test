@@ -1,1 +1,1 @@
-# A project to describe test
+# An automation project using selenium and cucumber
